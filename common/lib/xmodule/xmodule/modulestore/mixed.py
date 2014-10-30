@@ -21,6 +21,7 @@ from . import ModuleStoreEnum
 from .exceptions import ItemNotFoundError, DuplicateCourseError
 from .draft_and_published import ModuleStoreDraftAndPublished
 from .split_migrator import SplitMigrator
+from xmodule.modulestore import ModuleStoreAssetWriteInterface
 
 new_contract('CourseKey', CourseKey)
 new_contract('AssetKey', AssetKey)
