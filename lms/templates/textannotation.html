@@ -213,7 +213,10 @@ ${static.css(group='style-xmodule-annotations', raw=True)}
             };
         Catch = new CatchAnnotation($('#catchDIV'),catchOptions);
     }
-    require(["ova"], function(ova) {
-        startova();
-    });
+
+    (function (require) {
+        require(["ova"], function(ova) {
+            startova();
+        });
+    }).call(this, require || RequireJS.require);
 </script>

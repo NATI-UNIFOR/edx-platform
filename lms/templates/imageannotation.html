@@ -233,7 +233,9 @@
             osda.annotator.destroy();
     }
 
-    require(["osda"], function(osda){
-        startosda();
-    });
+    (function (require) {
+        require(["osda"], function(osda){
+            startosda();
+        });
+    }).call(this, require || RequireJS.require);
 </script>
